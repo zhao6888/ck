@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽取正方反方</title>
+    <style>
+        /* 样式定义 */
+        body {
+            font-size: 36px;
+            text-align: center;
+        }
+        button {
+            font-size: 24px;
+            padding: 10px 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flip a coin</h1>
+    <div id="result"></div>
+    <button onclick="flipCoin()">抽取</button>
+    <script>
+        // JavaScript代码
+        function flipCoin() {
+            // 随机生成0或1
+            var n = Math.floor(Math.random() * 2);
+            var result = "";
+            if (n == 0) {
+                result = "正方";
+            } else {
+                result = "反方";
+            }
+            // 在页面上显示结果
+            var resultDiv = document.getElementById("result");
+            resultDiv.textContent = result;
+        }
+    </script>
+</body>
+</html>
+ 
